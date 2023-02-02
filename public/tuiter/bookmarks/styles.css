@@ -1,0 +1,138 @@
+* {
+    background-color: black;
+}
+
+.wb-box {
+    height: 380px;
+    width: 504px;
+}
+.wb-border-general {
+    position: relative;
+    margin-left: 16px;
+}
+.wb-border-general-left{
+    position: absolute;
+    left: 16px;
+    background-color: rgb(47, 51, 54);
+    height: 100%;
+    width: 2px;
+}
+
+.wb-border-general-right{
+    position: absolute;
+    right: 10px;
+    background-color: rgb(47, 51, 54);
+    height: 100%;
+    width: 2px;
+    z-index: 100;
+}
+
+.wb-border-img-text {
+    border: solid;
+    border-width: thin;
+    border-color: lightgray;
+    border-radius: 15px;
+}
+
+.wb-title-margin {
+    margin-top: 12px;
+}
+
+.wb-title-font {
+    color: white;
+    font-size: 20px;
+}
+
+.wb-handle-font {
+    color: lightgray;
+    font-size: 13px;
+}
+
+
+.wb-border-bottom-inside-1{
+    position: absolute;
+    top:60px;
+    background-color: rgb(47, 51, 54);
+    height: 2px;
+    width: 100%;
+}
+
+.wb-box-part-2 {
+    position: absolute;
+    top:72px;
+}
+.wb-circle {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+
+.wb-float-left {
+    float: left;
+}
+
+.wb-float-done {
+    clear: both;
+}
+
+.wb-box-part-c {
+    /*position: absolute;*/
+    /*left:60px;*/
+    margin-left: 12px;
+}
+
+.wb-font-size {
+    font-size: 15px;
+}
+
+.wb-font-while {
+    color: white;
+}
+
+.wb-font-lightgray {
+    color: lightgray;
+}
+
+.wb-font-red {
+    color: red;
+}
+
+.wb-box-content {
+    width: 506px;
+    margin-right: 16px;
+}
+
+.wb-margin-top {
+    margin-top: 12px;
+}
+
+.wb-margin-left {
+    margin-left: 12px;
+}
+
+.wb-margin-bottom {
+    position: absolute;
+    bottom: 7px;
+}
+
+.wb-round-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.wb-font-bold {
+    font-weight: bold;
+}
+
+.wb-padding {
+    padding: 12px;
+}
+
+.wb-a {
+    text-decoration: none;
+}
+
+.wb-icon-width{
+    float: left;
+    width: 25%;
+}
