@@ -1,0 +1,60 @@
+.wb-text-position {
+    margin-left: 10px;
+    margin-top: 440px;
+    position: relative;
+}
+.wd-text-over-image-title {
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+    font-size: 15px;
+    color: lightgray;
+}
+.wd-text-over-image {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.wd-icon-over-input {
+    position: absolute;
+    left: 8px;
+    top: 5px
+}
+
+.wd-text-navigation {
+    position: absolute;
+    left: 55px;
+}
+.wd-icon-grey {
+    color: gray;
+}
+.wd-blue {
+    color: dodgerblue;
+}
+.wd-gold {
+    color: goldenrod;
+}
+.wd-bg-lightgray {
+    background-color: gray;
+}
+
+.wd-title-text {
+    color: black;
+    font-weight: bold;
+}
+
+.wd-bottom-border{
+    position: absolute;
+    left: 15px;
+    background-color: cornflowerblue;
+    height: 5px;
+    width: 63px;
+    border-radius: 50px;
+}
+
+.wd-font-size-small {
+    font-size: 13px;
+}
