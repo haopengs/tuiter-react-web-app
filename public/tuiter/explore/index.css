@@ -1,3 +1,8 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+}
+
 .wb-text-position {
     margin-left: 10px;
     margin-top: 440px;
