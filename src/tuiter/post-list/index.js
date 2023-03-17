@@ -1,8 +1,12 @@
 import React from "react";
-import listsArr from "./lists.json"
+import listsArr2 from "./lists.json"
+import {useSelector} from "react-redux";
 import PostListItem from "./post-list-items";
 
+import "./index.css"
+
 const PostList = () => {
+    const listsArr = useSelector(state => state.tuits)
     return(
         <div>
             {

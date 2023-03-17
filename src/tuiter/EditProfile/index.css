@@ -1,0 +1,38 @@
+.wd-button {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+
+.wd-textHeight {
+    height: 100px;
+}
+
+.wd-topBar {
+    background-color: white;
+    height: 40px;
+}
+
+.wd-btnX {
+    color: black;
+    background-color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.wd-btnSave {
+    color: white;
+    background-color: black;
+    border: none;
+    width: 70px;
+    text-decoration: none;
+
+}
+
+textarea::placeholder::first-line {
+    font-weight: bold;
+    font-size: 20px;
+}
+textarea::placeholder {
+    font-size: 18px; /* 设置第一行文本的字体大小 */
+}
