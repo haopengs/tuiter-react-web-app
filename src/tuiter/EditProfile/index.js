@@ -39,26 +39,32 @@ const EditProfileComponent = () =>{
 
     }
 
-    // useEffect(() => {
-    //     dispatch(updatePro(curPro))
-    // }, [curPro, dispatch])
-
 
     const handleSave = () =>{
-        setCurPro({
+        // setCurPro({
+        //     ...curPro,
+        //     "firstName" : firstName,
+        //     "lastName" :lastName,
+        //     "bio": bio,
+        //     "location": loc,
+        //     "website":web,
+        // })
+        const updatedPro = {
             ...curPro,
             "firstName" : firstName,
             "lastName" :lastName,
             "bio": bio,
             "location": loc,
             "website":web,
-        })
+        }
+        setCurPro(updatedPro)
         // console.log(firstName + lastName)
-        // console.log(curPro)
+        console.log(curPro)
+        // console.log(prePro)
 
-        dispatch(updatePro(curPro))
+        dispatch(updatePro(updatedPro))
 
-        // navigate('/tuiter/profile')
+        navigate('/tuiter/profile')
         // history.push("/tuiter/profile");
     }
 
