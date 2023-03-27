@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useSelector} from "react-redux";
-import {updatePro} from "../reducers/profile-reducer";
+import {updatePro, changeEdit} from "../reducers/profile-reducer";
 import {useDispatch} from "react-redux";
 
 import "./index.css"
@@ -15,6 +15,8 @@ const EditProfileComponent = () =>{
     const [bio, setBio] = useState(profile.bio)
     const [loc, setLoc] = useState(profile.location)
     const [web, setWeb] = useState(profile.website)
+    const [birth, setBirth] = useState(profile.dateOfBirth)
+    const [editing, setEditing] = useState(profile.editing)
 
     const handleName = (event) => {
         const name = event.target.value.split(" ")
@@ -39,6 +41,15 @@ const EditProfileComponent = () =>{
 
     }
 
+    const  handleBirth = (event) => {
+        setBirth(event.target.value)
+
+    }
+
+    const  handleBirthSave = () => {
+        setEditing(!editing)
+    }
+
 
     const handleSave = () =>{
         // setCurPro({
@@ -56,6 +67,7 @@ const EditProfileComponent = () =>{
             "bio": bio,
             "location": loc,
             "website":web,
+            "dateOfBirth":birth
         }
         setCurPro(updatedPro)
         // console.log(firstName + lastName)
@@ -96,11 +108,29 @@ const EditProfileComponent = () =>{
 
                     <div className={"mt-5"}>
                         <div>
-                            Birth date · <a href={"#"} className={"text-decoration-none"}>Edit</a>
+                            Birth date ·
+                            <a
+                                className="text-decoration-none"
+                                onClick={() =>{
+                                    dispatch(changeEdit(profile))
+                                }}
+                            >
+                            {profile.editing ? "" : "Edit"}
+                            </a>
                         </div>
-                        <div>
-                            {profile.dateOfBirth}
-                        </div>
+                        {profile.editing ? (
+                            <textarea
+                                className="form-control w-75"
+                                onChange={handleBirth}
+                                type="text"
+                                placeholder={profile.dateOfBirth}
+                            />
+                        ) : (
+                            <label>{profile.dateOfBirth}</label>
+                        )}
+                        {/*<div>*/}
+                        {/*    {profile.dateOfBirth}*/}
+                        {/*</div>*/}
                     </div>
 
                     <div className={"mt-5"}>
