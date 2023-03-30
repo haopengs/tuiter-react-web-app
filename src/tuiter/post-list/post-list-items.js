@@ -1,9 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck, faComment,faShare,faHeart, faArrowRightFromBracket, faThumbsDown} from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck, faComment,faShare,faHeart, faArrowRightFromBracket} from "@fortawesome/free-solid-svg-icons";
 import {changeLikes, deleteTuit} from "../tuits/tuits-reducer";
 import {useDispatch} from "react-redux";
-import {deleteTuitThunk, updateTuitThunk} from "../../service/tuits-thunks";
 
 import "./index.css"
 
@@ -15,10 +14,14 @@ const PostListItem = (
     }
 ) => {
     const dispatch = useDispatch()
-
-    const deleteTuitHandler = (id) => {
-        dispatch(deleteTuitThunk(id));
+    const handleLike = (list) =>{
+        // dispatch(changeLikes(list.liked))
+        dispatch(changeLikes(list))
     }
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    }
+
 
 
     return(
@@ -37,33 +40,19 @@ const PostListItem = (
                     <p> {list.tuit}</p>
                 </div>
                 <div className="mt-3 ps-5 row text-secondary">
-                    <div className="col-2">
+                    <div className="col-3">
                         <FontAwesomeIcon icon={faComment} />
                         <span className="ps-3">{list.replies}</span>
                     </div>
-                    <div className="col-2">
+                    <div className="col-3">
                         <FontAwesomeIcon icon={faShare} />
                         <span className="ms-3">{list.retuits}</span>
                     </div>
-                    <div className="col-2">
+                    <div className="col-3">
                         <FontAwesomeIcon icon={faHeart}
                                          className={`${list.liked ? 'wd-red' : ''}`}
-                                         onClick={() => dispatch(updateTuitThunk({
-                                             ...list,
-                                             liked: !list.liked,
-                                             likes: list.liked? list.likes - 1 : list.likes + 1
-                                         }))}/>
+                                         onClick={() => handleLike(list)}/>
                         <span className="ms-3">{list.likes}</span>
-                    </div>
-                    <div className="col-2">
-                        <FontAwesomeIcon icon={faThumbsDown}
-                                         className={`${list.disLiked ? 'wd-red' : ''}`}
-                                         onClick={() => dispatch(updateTuitThunk({
-                                             ...list,
-                                             disLiked: !list.disLiked,
-                                             disLikes: list.disLiked? list.disLikes - 1 : list.disLikes + 1
-                                         }))}/>
-                        <span className="ms-3">{list.disLikes}</span>
                     </div>
                     <div className="col-3">
                         <FontAwesomeIcon icon={faArrowRightFromBracket} />
