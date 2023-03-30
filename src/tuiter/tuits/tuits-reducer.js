@@ -65,8 +65,6 @@ const tuitsSlice = createSlice({
                     ...payload
                 }
             }
-
-
     },
     reducers: {
         changeLikes(state, action) {
