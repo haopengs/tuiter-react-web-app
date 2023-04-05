@@ -25,7 +25,8 @@ const PostListItem = (
 
         <div className="p-3 border border-dark-subtle">
             <img className="float-start rounded-circle pe-1" width={50} height={50}
-                 src={`/images/${list.image}`}/>
+                 // src={`/images/${list.image}`}/>
+                    src={`${list.image}`}/>
             <div className="">
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(list._id)}></i>
